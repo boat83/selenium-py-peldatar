@@ -31,16 +31,20 @@ link = driver.find_element_by_xpath('//button[text()="Export HTML table to CSV f
 link.click()
 time.sleep(3.0)
 driver.close()
-with open('table_in.csv', 'r') as t1, open('c:\\users\\dell\\downloads\\table.csv', 'r') as t2:
-    fileone = t1.readlines()
-    filetwo = t2.readlines()
 
-with open('update.csv', 'w') as outFile:
-    for line in filetwo:
-        if line not in fileone:
-            outFile.write(line)
+#with open('table_in.csv', 'r') as t1, open('c:\\users\\dell\\downloads\\table.csv', 'r') as t2:
+#    fileone = t1.readlines()
+#    filetwo = t2.readlines()
+#
+#with open('update.csv', 'w') as outFile:
+#    for line in filetwo:
+#        if line not in fileone:
+#           outFile.write(line)
 
-
+with open('c:\\users\\dell\\downloads\\table.csv', 'r') as t1:
+    t1 = csv.reader(t1)
+    for row in t1:
+        print(row)
 
 
 
