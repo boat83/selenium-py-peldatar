@@ -29,14 +29,19 @@ with open('table_in.csv') as csvfile:
 
 link = driver.find_element_by_xpath('//button[text()="Export HTML table to CSV file"]')
 link.click()
+time.sleep(3.0)
 driver.close()
-with open('c:\\users\\dell\\downloads\\table.csv') as csvfile_new:
-    csvreader_new = csv.reader(csvfile_new, delimiter=',')
-assert csvreader == csvreader_new
-print('nincs egyezes')
+with open('table_in.csv', 'r') as t1, open('c:\\users\\dell\\downloads\\table.csv', 'r') as t2:
+    fileone = t1.readlines()
+    filetwo = t2.readlines()
+
+with open('update.csv', 'w') as outFile:
+    for line in filetwo:
+        if line not in fileone:
+            outFile.write(line)
 
 
-print('ok')
+
 
 
 
