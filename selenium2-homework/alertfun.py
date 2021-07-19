@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-
+from selenium.webdriver.common.action_chains import ActionChains
 
 options = Options()
 options.add_argument('--headless')
@@ -34,6 +34,13 @@ try:
     assert(alert_3.text == f'You entered: {ref_text}')
     print(ref_text)
     alert_3.accept()
+
+    d_click = driver.find_element_by_id('double-click')
+    action = ActionChains(driver)
+    action.double_click(d_click).perform()
+    alert_4 = driver.switch_to.alert
+    time.sleep(2)
+    alert_4.accept()
 
 
 
