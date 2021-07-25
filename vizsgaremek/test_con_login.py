@@ -1,4 +1,4 @@
-def test_1():
+def test_ba():
     import time
     from selenium import webdriver
     from selenium.webdriver.chrome.options import Options
