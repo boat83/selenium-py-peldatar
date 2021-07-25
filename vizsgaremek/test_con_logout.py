@@ -29,3 +29,6 @@ def test_con_logout():
         signin_button = driver.find_element_by_xpath('//*[@id="app"]/nav/div/ul/li[2]/a').text
         assert signin_button == 'Sign in'
         print('Felhasznalo kijeletkezve')
+
+    finally:
+        driver.close()
