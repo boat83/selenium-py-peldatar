@@ -1,4 +1,4 @@
-def con_feed_list():
+def test_con_feed_list():
     import time
     from selenium import webdriver
     from selenium.webdriver.chrome.options import Options
