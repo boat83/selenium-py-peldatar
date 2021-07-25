@@ -3,7 +3,6 @@ def test_con_login():
     from selenium import webdriver
     from selenium.webdriver.chrome.options import Options
     from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.common.exceptions import NoSuchElementException
 
     options = Options()
     options.add_argument('--headless')
