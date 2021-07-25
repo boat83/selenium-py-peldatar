@@ -34,7 +34,7 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pytest 
+        pytest vizsgaremek/test_con_login.py
     - name: Get Allure history
       uses: actions/checkout@v2
       if: always()
