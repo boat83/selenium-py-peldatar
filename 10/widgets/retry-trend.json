@@ -1,12 +1,4 @@
 [ {
-  "buildOrder" : 10,
-  "reportUrl" : "https://boat83.github.io/selenium-py-peldatar/10/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "run" : 0,
-    "retry" : 0
-  }
-}, {
   "data" : {
     "run" : 0,
     "retry" : 0
