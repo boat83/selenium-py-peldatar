@@ -17,6 +17,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9.6
+        
+    - name: Builds and Starts
+      run: |
+          docker-compose up -d
+    - name: Sleep for 45 seconds
+      run: sleep 45s
+      shell: bash
 
     - name: Install dependencies
       run: |
@@ -26,12 +33,7 @@ jobs:
     - name: Install Chrome
       run: |
         sudo apt install google-chrome-stable
-    - name: Builds and Starts
-      run: |
-          docker-compose up -d
-    - name: Sleep for 45 seconds
-      run: sleep 45s
-      shell: bash
+    
 
     - name: Test with pytest
       run: |
