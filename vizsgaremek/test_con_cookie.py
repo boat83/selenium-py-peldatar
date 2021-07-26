@@ -1,4 +1,4 @@
-def con_cookie():
+def test_con_cookie():
     import time
     from selenium import webdriver
     from selenium.webdriver.chrome.options import Options
@@ -9,7 +9,6 @@ def con_cookie():
     options.add_argument('--disable-gpu')
 
     # driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=options)  # headless
-    driver = webdriver.Chrome(ChromeDriverManager().install())
 
     driver = webdriver.Chrome(ChromeDriverManager().install())
     # conduit oldalra navigalas
