@@ -1,4 +1,4 @@
-def test_con_upload_data2()
+def test_con_upload_data2():
 
     import time
     from selenium import webdriver
